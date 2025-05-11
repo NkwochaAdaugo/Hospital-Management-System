@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctors</title>
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Doctors</h1>
+    <ul>
+        {% for doctor in doctors %}
+            <li>{{ doctor.user.get_full_name }} - {{ doctor.specialty }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

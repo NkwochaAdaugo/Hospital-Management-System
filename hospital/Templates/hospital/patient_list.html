@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patients</title>
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Patients</h1>
+    <ul>
+        {% for patient in patients %}
+            <li>{{ patient.user.get_full_name }}  {{ patient.date_of_birth }}</li>
+        {% endfor %}
+    </ul>
+    <!-- Link to 'Add Patient' page -->
+    <a href="{% url 'add_patient' %}">Add New Patient</a>  <!-- Linking to 'add_patient' URL -->
+</body>
+</html>

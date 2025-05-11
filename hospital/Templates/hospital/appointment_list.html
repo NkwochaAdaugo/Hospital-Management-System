@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Appointments</title>
+    {% load static %}
+
+</head>
+<body>
+    <h1>Appointments</h1>
+    <ul>
+        {% for appointment in appointments %}
+            <li>
+                <a href="{% url 'appointment_detail' appointment.pk %}">
+                    Appointment with Dr. {{ appointment.doctor.user.get_full_name }} on {{ appointment.date }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'appointment_create' %}">Create new appointment</a>
+</body>
+</html>

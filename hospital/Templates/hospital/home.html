@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ hospital_info.name }}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>{{ hospital_info.name }}</h1>
+    <nav>
+        <ul>
+            <li><a href="{% url 'patient_list' %}">Patients</a></li>
+            <li><a href="{% url 'doctor_list' %}">Doctors</a></li>
+            <li><a href="{% url 'appointment_list' %}">Appointments</a></li>
+            <li><a href="{% url 'medical_record_list' %}">Medical Records</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

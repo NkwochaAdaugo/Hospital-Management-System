@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Medical Record Detail</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Medical Record Detail</h1>
+    <p>Patient: {{ record.patient.user.get_full_name }}</p>
+    <p>Doctor: {{ record.doctor.user.get_full_name }}</p>
+    <p>Date: {{ record.date }}</p>
+    <p>Diagnosis: {{ record.diagnosis }}</p>
+    <p>Treatment: {{ record.treatment }}</p>
+    <a href="{% url 'medical_record_list' %}">Back to Medical Records</a>
+</body>
+</html>

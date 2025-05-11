@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Medical Records</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Medical Records</h1>
+    <ul>
+        {% for record in records %}
+            <li>
+                <a href="{% url 'medical_record_detail' record.pk %}">
+                    Record for {{ record.patient.user.get_full_name }} on {{ record.date }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'medical_record_create' %}">Create new medical record</a>
+</body>
+</html>

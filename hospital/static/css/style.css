@@ -1,0 +1,99 @@
+/* style.css */
+
+/* Set the body font style and background color */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #b64d4d; /* Text color */
+    margin: 0;
+    padding: 0;
+}
+
+/* Change heading colors */
+h1, h2 {
+    font-family: 'Helvetica', sans-serif;
+    color: #35424a; /* Darker color for headings */
+    text-align: center;
+}
+
+/* Styling for the links */
+a {
+    color: #35424a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #e59035; /* Change color on hover */
+    text-decoration: underline;
+}
+
+/* Style for buttons */
+button {
+    background-color: #101314;
+    color: rgb(253, 106, 106);
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #e59035; /* Button hover color */
+}
+
+/* Form field styling */
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #f99393;
+    font-size: 14px;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Style for form headings */
+form h2 {
+    color: #0d0f10;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Navigation styles */
+nav {
+    background-color: #07090a;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #3a18b4;
+    border-radius: 4px;
+}
